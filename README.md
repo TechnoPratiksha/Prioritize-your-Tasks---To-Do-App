@@ -1,12 +1,52 @@
-# React + Vite
+# 📝 Full Stack Todo App  
+<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/42da7fad-1e13-46e4-b72a-c415a6bde0a2" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **production-ready Todo Application** built with **React (Vite + Tailwind)** on the frontend and **Spring Boot + MongoDB** on the backend, containerized with **Docker** and deployed to **Vercel (Frontend)** and **Render (Backend)**.  
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [Frontend App](https://todo-app-chi-beige.vercel.app/)  
+🔗 **Backend API**: [Spring Boot API](https://backend-web-app-5vye.onrender.com)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add, update, delete, and mark tasks as completed  
+- Modern responsive UI built with **Tailwind CSS**  
+- Blazing fast frontend powered by **Vite + React**  
+- RESTful API with **Spring Boot**  
+- Persistent storage with **MongoDB**  
+- Fully containerized using **Docker**  
+- Deployment:  
+  - **Frontend** → Vercel  
+  - **Backend** → Render  
+
+---
+
+## 🛠️ Tech Stack  
+
+### **Frontend**  
+- React (Vite)  
+- Tailwind CSS  
+- Axios (for API calls)  
+
+### **Backend**  
+- Spring Boot  
+- Spring Data MongoDB  
+- REST API  
+
+### **Database**  
+- MongoDB (Atlas or Dockerized local instance)  
+
+### **Deployment & DevOps**  
+- Docker & Docker Compose  
+- Vercel (Frontend hosting)  
+- Render (Backend hosting)  
+
+---
+
+## ⚙️ Project Setup  
+
+### **Clone the repository**  
+```bash
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
