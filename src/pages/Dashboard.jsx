@@ -18,7 +18,6 @@ export default function Dashboard() {
       const res = await getTasks();
       setTasks(res.data);
     } catch {
-      console.log("Backend not available, using localStorage only");
       const localData = localStorage.getItem("tasks");
       if (localData) setTasks(JSON.parse(localData));
     }
@@ -51,35 +50,31 @@ export default function Dashboard() {
     setLoading(false);
     setNotification("✅ Task added successfully!");
 
-    // Auto-hide after 3s
     setTimeout(() => setNotification(""), 3000);
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[70vh] relative">
-      {/* Notification */}
-      {/* Notification */}
-<AnimatePresence>
-  {notification && (
-    <motion.div
-      key="notif"
-      initial={{ opacity: 0, y: -50, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -50, scale: 0.9 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="absolute top-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"
-    >
-      {notification}
-    </motion.div>
-  )}
-</AnimatePresence>
+    <div className="flex justify-center items-center min-h-[70vh] p-4 relative">
+      <AnimatePresence>
+        {notification && (
+          <motion.div
+            key="notif"
+            initial={{ opacity: 0, y: -50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -50, scale: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="absolute top-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg"
+          >
+            {notification}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-
-      {/* Task Form Card */}
-      <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center mb-4 text-[#556B2F]">
-  💭 Hey, what’s on your mind?</h2>
-        <form className="flex flex-col gap-4" onSubmit={handleAddTask}>
+      <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full max-w-md">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-4 text-[#556B2F]">
+          💭 Hey, what’s on your mind?
+        </h2>
+        <form className="flex flex-col gap-3" onSubmit={handleAddTask}>
           <input
             type="text"
             placeholder="Task title"

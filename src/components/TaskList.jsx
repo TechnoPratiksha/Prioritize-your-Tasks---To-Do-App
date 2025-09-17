@@ -13,7 +13,7 @@ export default function TaskList({ tasks, onComplete, onDelete }) {
     <div className="space-y-6">
       {Object.keys(groupedTasks).map((date) => (
         <div key={date} className="bg-gray-50 p-4 rounded-lg shadow">
-          <h2 className="text-xl font-bold mb-4">📅 {date}</h2>
+          <h2 className="text-lg sm:text-xl font-bold mb-4">📅 {date}</h2>
           <div className="space-y-3">
             {groupedTasks[date].map((task) => (
               <TaskItem

@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F5F5DC] text-[#556B2F]">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {activeTab === "dashboard" && <Dashboard />}
         {activeTab === "all" && <AllTasks />}
         {activeTab === "completed" && <CompletedTasks />}
